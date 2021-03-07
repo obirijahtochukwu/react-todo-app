@@ -118,14 +118,16 @@ button {
 
 .card-1 {
   background: linear-gradient(rgb(0,250,154,0.08),rgb(65,105,186,0.2));
+  display: block;
   padding: 2rem;
-  margin: 2rem;
+  margin: 1rem;
   border: 0.1rem solid rgb(235,137,186,0.3);
   border-radius: 10px;
   transition: all 0.5s ease-in;
 }
 .card-2 {
   background: linear-gradient(rgb(135,206,235,0.1),rgb(235,137,186,0.3));
+  display: block;
   padding: 2rem;
   margin: 2rem;
   border: 0.1rem solid rgb(235,137,186,0.3);
@@ -134,6 +136,7 @@ button {
 }
 .card-3 {
   background: linear-gradient(rgb(70,130,180,0.3),rgb(224,255,255,0.3));
+  display: block;
   padding: 2rem;
   margin: 2rem;
   border: 0.1rem solid rgb(235,137,186,0.3);
@@ -142,6 +145,7 @@ button {
 }
 .card-4 {
   background: linear-gradient(rgb(255,255,0,0.1),rgb(255,165,0,0.3));
+  display: block;
   padding: 2rem;
   margin: 2rem;
   border: 0.1rem solid rgb(235,137,186,0.3);
