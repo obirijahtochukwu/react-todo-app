@@ -137,5 +137,3 @@ export default function HomePage() {
   </>
  )
 }
-const comma = '{'
-const commas = '}'
