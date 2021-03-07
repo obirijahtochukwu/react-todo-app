@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className='nav-header'>
           <Link to='/'>
             <h2 style={{color:'orangered',listStyle:"none",fontFamily:"cursive"}}>
-            jumia</h2>
+            Biswa</h2>
           </Link>
           <button className='btn1 toggle-btn'style={{backgroundColor:"orangered"}} onClick={openSidebar}>
             <FaBars />
