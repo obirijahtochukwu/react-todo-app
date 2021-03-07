@@ -8,37 +8,36 @@ export default function HomePage() {
    <div className="container-fluid">
     <div className="row header-img" style={{backgroundImage:'linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),url(img/img-3.jpeg)'}}>
      <h1>welcome to <span className="text-uppercase text-warning">biswa api</span></h1>
-     <p>Want to know how developers build online video</p>
-     <button className="btn-inline align-self-center">get started</button>
-     <button className="btn-outline px-3 mx-3">join us</button>
+     <p>stream your video on any platform</p>
+     <button className="btn-inline mb-4">get started</button>
     </div>
    </div>
 
       {/* ICON */}
    <div className="container">
-    <div className="row">
-     <div className="col-5  icon col-md-3 mx-auto">
+    <div className="row text-center">
+     <div className="col-6 mx-auto  icon col-md-3 ">
       <img src="./img/logo1.png" alt=""/>
      </div>
-     <div className="col-5  icon col-md-3 mx-auto">
+     <div className="col-6 mx-auto  icon col-md-3 ">
       <img src="./img/logo2.png" alt=""/>
      </div>
-     <div className="col-5  icon col-md-3 mx-auto">
+     <div className="col-6 mx-auto  icon col-md-3 ">
       <img src="./img/logo3.png" alt=""/>
      </div>
-     <div className="col-5  icon col-md-3 mx-auto">
+     <div className="col-6 mx-auto  icon col-md-3 ">
       <img src="./img/logo4.png" alt=""/>
      </div>
-     <div className="col-5  icon col-md-3 mx-auto">
+     <div className="col-6 mx-auto  icon col-md-3 ">
       <img src="./img/logo5.png" alt=""/>
      </div>
-     <div className="col-5  icon col-md-3 mx-auto">
+     <div className="col-6 mx-auto  icon col-md-3 ">
       <img src="./img/logo6.png" alt=""/>
      </div>
-     <div className="col-5  icon col-md-3 mx-auto">
+     <div className="col-6 mx-auto  icon col-md-3 ">
       <img src="./img/logo7.png" alt=""/>
      </div>
-     <div className="col-5  icon  col-md-3 mx-auto">
+     <div className="col-6 mx-auto icon  col-md-3 ">
       <img src="./img/logo9.png" alt=""/>
      </div>
     </div>
@@ -49,12 +48,12 @@ export default function HomePage() {
     <div className="row mt-5">
      <div className="col-md-6 mx-auto">
       <div className="quote">
-       <h1 className="text-uppercase">biswa api</h1>
-       <p><i>Biswa Video is an API that enables developers to build unique live and on-demand video experiences. Lorem ipsum dolor sit amet consectetur adipisicing elit. .</i></p>
+       <h2 className="text-uppercase">biswa api</h2>
+       <p><i>Biswa Video is an API that enables developers to build unique live and on-demand video experiences.</i></p>
       </div>
      </div>
      <div className="col-md-6 mx-auto m-4">
-      <img src="../img/s4.jpg" style={{width:'100%'}} alt=""/>
+      <img src="../img/item13.jpg" style={{width:'100%'}} alt=""/>
      </div>
     </div>
    </div>
@@ -95,10 +94,10 @@ export default function HomePage() {
       <div className="row">
          <div className="col-11 mx-auto col-md-5">
             <h5 className='text-center mt-5 pb-3' style={{color:'orange'}}>STEP 1</h5>
-            <h2 className='text-center py-4' >POST a video.</h2>
+            <h2 className='py-4' >POST a video.</h2>
             <p>POST the URL of any video file using the Biswa API. Biswa will ingest the file, create a video asset, and prepare it for streaming.</p>
          <div className="link">
-            <p>POST https://api.biswa.com/video/v1/assets</p>
+            <p>POST https//api.biswa.com/video/v1/assets</p>
          </div>
          </div>
          <div className="col-11 mx-auto col-md-5">
@@ -112,22 +111,25 @@ export default function HomePage() {
       </div>
    </div>
    <div className="container-fluid">
-      <div className="ready text-center">
-         <h3 className="text-center">Ready to get started?</h3>
-         <p className="text-center">No credit card to start. $20 in free credit when you’re ready.
-         </p>
-         <button className="btn-outline m-4">talk to us</button>
+      <div className="ready">
+         <div className="row">
+          <div className="col-11 mx-auto col-md-6">
+           <h1 className="text-center">Ready to get started?</h1>
+           <p>No credit card to start. $20 in free credit when you’re ready.
+           </p>
          <button className="btn-inline m-4">create account</button>
+          </div>
+         </div>
          <br/>
          <hr/>
          <br/>
          <div className="row">
-            <div className="col-md-6 mx-auto mt-5">
+            <div className="col-11 mx-auto col-md-5 mt-5">
                <h3 className='mb-3'>Better quality through data. biswa Data.</h3>
                <p className='mb-5'>Our meticulously designed metrics and powerful filtering tools help you see what your users are really experiencing, around the world and across devices.</p>
                <button className="btn-outline">learn more about biswa data</button>
             </div>
-            <div className="col-md-6 mx-auto mt-5">
+            <div className="col-12 col-md-6 mx-auto mt-5">
                <img src="../img/biswa.png" style={{width:'100%'}} className='img' alt=""/>
             </div>
          </div>
