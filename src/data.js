@@ -1,41 +1,48 @@
-const sublinks = [
+const links = [
   {
-    page: 'diswa video',
-    links: [
-      { label: 'overview', to: '/' },
-      { label: 'features', to: '/' },
-      { label: 'live', to: '/' },
-      { label: 'encoding', to: '/' },
-      { label: 'pricing', to: '/' },
-    ],
+    id: 1,
+    url: '/',
+    text: 'home'
   },
   {
-    page: 'docs & tools',
-    links: [
-      { label: 'vidoe docs', to: '/products' },
-      { label: 'data docs', to: '/products' },
-      { label: 'api reference', to: '/cart' },
-      { label: 'open source', to: '/cart' },
-      { label: 'sdk', to: '/cart' },
-    ],
+    id: 2,
+    url: '/mercury',
+    text: 'mercury'
   },
   {
-    page: 'company',
-    links: [
-      { label: 'team', to: '/signin' },
-      { label: 'customers', to: '/createaccount' },
-      { label: 'parteners', to: '/signin' },
-      { label: 'jobs', to: '/createaccount' },
-    ],
+    id: 3,
+    url: '/venus',
+    text: '/venus'
   },
   {
-    page: 'login',
-    links: [
-      { label: 'sign in', to: '/signin' },
-      { label: 'create account', to: '/createaccount' },
-    ],
+    id: 4,
+    url: '/earth',
+    text: 'earth'
   },
+  {
+    id: 5,
+    url: '/mars',
+    text: 'mars'
+  },
+  {
+    id: 6,
+    url: '/jupiter',
+    text: 'jupiter'
+  },
+  {
+    id: 7,
+    url: '/saturn',
+    text: 'saturn'
+  },
+  {
+    id: 8,
+    url: '/uranus',
+    text: 'uranus'
+  },
+  {
+    id: 9,
+    url: '/neptune',
+    text: 'neptune'
+  }
 ];
-
-
-export default sublinks;
+export default links;
