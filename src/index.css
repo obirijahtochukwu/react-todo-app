@@ -66,11 +66,11 @@ form > button {
   margin-bottom: 0.5rem;
   min-width: 0 !important;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.3);
-  transition: 0.3s;
+  transition: 0.5s ease-in-out;
   border-radius: 5px;
 }
 .item:hover{
-  color: white;
+  color: white !important;
   background-color: hsl(233, 72%, 55%);
 }
 @keyframes example {
@@ -91,12 +91,50 @@ form > button {
   color: gray !important;
   background-color: rgba(0, 0, 0, 0.3);
 }
+.fab {  
+  display: flex;
+  align-items: center;
+  font-weight: 900;
+}
+.fas {
+  color: rgb(211, 9, 9);
+  background-color: transparent;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  border: transparent;
+}
 .fa {
+  color: hsl(233, 72%, 55%);
   background: transparent;
   border: transparent !important;
-  color: red;
+  transition: 0.5s;
   font-weight: bolder;
 }
+.fa:hover {
+  color: white;
+}
+.accordion {
+  color: linear-gradient(to right,hsl(192, 91%, 50%),hsl(325, 87%, 65%)) !important;
+  background-color: transparent;
+  border: transparent;
+  margin-right: 0.3rem;
+}
+
+.readmore {
+  word-break: break-all;
+  display: block;
+  color: rgba(248, 249, 250, 0.925);
+  background: linear-gradient(to right,hsl(192, 91%, 50%),hsl(325, 87%, 65%));
+  padding: 1rem;
+  z-index: -1;
+  font-weight: 600;
+  border-radius: 5px;
+  margin-top: 0;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.3);
+  
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -129,6 +167,9 @@ form > button {
   }
 }
 .over {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   color: gray;
   text-decoration: line-through;
   text-decoration-color: gray;
