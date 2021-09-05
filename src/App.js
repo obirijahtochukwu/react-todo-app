@@ -13,12 +13,14 @@ const getLocalStorage = () => {
 export default function App() {
 
   const [name, setName] = useState('');
+  // eslint-disable-next-line
+  const [isCompleted, setIsCompleted] = useState(false);
   const [items, setItems] = useState(getLocalStorage());
   
   const handleSubmit = (e) => {
     e.preventDefault();
     if(name){
-      const item = {id: new Date().getTime().toString(), name};
+      const item = {id: new Date().getTime().toString(), name, isCompleted};
       setItems([...items, item])
       setName('')
     }
@@ -28,6 +30,14 @@ export default function App() {
     setItems(items.filter((item)=> item.id !== id));
   }
 
+  const ind = (id, isCompleted) =>{
+    const done = items.map((item)=>{
+      item.id === id && (item.isCompleted = !item.isCompleted)
+      return item
+    })
+    setItems(done);
+  }
+
   useEffect(() => {
     localStorage.setItem('items', JSON.stringify(items));
   }, [items]);
@@ -35,8 +45,9 @@ export default function App() {
   return (
     <React.Fragment>
       <div className="container">
+        <i class="fa fa-ban" aria-hidden="true"></i>
         <div className="row">
-          <div className="col-11 col-md-6 mx-auto">
+          <div className="col-12 col-md-6 mx-auto">
             <div className="todo">
               <h1>todo</h1>
             </div>
@@ -44,26 +55,29 @@ export default function App() {
                 <input id='name' name='name' type="text" value={name} onChange={(e)=> setName(e.target.value)} className='w-100 input'/>
                 <button type='submit'>➕</button>
             </form>
-            <div className="m-0">
-              {items.map((item)=>{
-                const {id, name} = item;
-                return (
-                  <div key={id}>
-                    <div className='m-0 item'>
-                      <span>
-                        <span className="checkbox">
-                          <input type="checkbox"/>
+            <div className="bg-white pt-2">
+              <div className="m-2">
+                {items.map((item)=>{
+                  const {id, name, isCompleted} = item;
+                  return (
+                    <div key={id}>
+                      <div className='item'>
+                        <span className={isCompleted ? 'ml- over o' : 'ml-2 op'}>{name}</span>
+                        <span>
+                          <button onClick={()=> ind(id)} disabled={isCompleted === true} className={isCompleted ? "complete completed mr-1" : "mr-1 complete"}>Done</button>
+                          <button onClick={()=> removeItem(id)} className='fa'>                      
+                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                          </button>
                         </span>
-                        <span className='ml-2'>{name}</span>
-                      </span>
-                      <button onClick={()=> removeItem(id)}>❌</button>
+                      </div>
                     </div>
-                  </div>
-                )
-              })}
-              <p className='m-0 footer'>
-                <span className="badge">{items.length} duties </span>
-                <span className="right" onClick={()=> setItems([])}>{items.length === 0 ? 'clear completed' : 'clear all'}</span></p>
+                  )
+                })}
+              </div>
+                <p className='m-0 footer'>
+                  <span className="badge">{items.length} duties </span>
+                  <span className="right" onClick={()=> setItems([])}>{items.length > 0 ? 'clear all' : null}</span>
+                </p>
             </div>
           </div>
         </div>
