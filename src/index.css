@@ -80,10 +80,22 @@ form > button {
   75% {background-color: blue;}
   100% {background-color: green;}
 }
-.item > button {
-  background: transparent;
+.complete {
+  color: rgb(31, 140, 202);
+  font-weight: bolder;
+  background-color: yellow;
   border: transparent;
+  border-radius: 5px;
+}
+.completed {
+  color: gray !important;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.fa {
+  background: transparent;
+  border: transparent !important;
   color: red;
+  font-weight: bolder;
 }
 .footer {
   display: flex;
@@ -117,7 +129,7 @@ form > button {
   }
 }
 .over {
+  color: gray;
   text-decoration: line-through;
-  text-decoration-color: red;
-  text-decoration-style: double;
+  text-decoration-color: gray;
 }
