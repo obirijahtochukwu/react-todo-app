@@ -45,7 +45,6 @@ export default function App() {
   return (
     <React.Fragment>
       <div className="container">
-        <i class="fa fa-ban" aria-hidden="true"></i>
         <div className="row">
           <div className="col-12 col-md-6 mx-auto">
             <div className="todo">
